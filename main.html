@@ -1,0 +1,86 @@
+<!DOCTYPE html> 
+<html>
+<head>
+    <title>PhotoWeb</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.2/css/fontawesome.min.css" integrity="sha384-X8QTME3FCg1DLb58++lPvsjbQoCT9bp3MsUU3grbIny/3ZwUJkRNO8NPW6zqzuW9" crossorigin="anonymous">
+</head>
+<body>
+    <header>
+        <nav>
+        <div class="logo">
+            Photo<span>pi</span>X
+        </div>
+        <div class="menu">
+              <a href="#">Home</a>
+              <a href="#">About</a>
+              <a href="#">Gallery</a>
+              <a href="#">Contact</a>
+        </div>
+        <div class="icon">
+            <i class="fa fa-search"></i>
+            <a href="#">Login</a>
+        </div>
+        </nav>
+        <section class="h-text">
+            <i class="fa fa-camera" id="camera"></i>
+            <h1>Capturing the moments that captivate your heaart.</h1>
+            <input type="text" name="" placeholder="Search here...">
+            <button><i class="fa fa-search"></i></button>
+        </section>
+    </header>
+    <section class="filter-gallery">
+        <div class="portfolio-menu">
+            <ul>
+                <li class="active" data-filter="*">All</li>
+                <li data-filter="nature">Nature</li>
+                <li data-filter="faishon">Faishon</li>
+                <li data-filter="wedding">wedding</li>
+                
+            </ul>
+        </div>
+        <div class="portfolio-item">
+            <div class="item nature"><img src="img/p1.jpg" width="100" height="100"></div>
+        </div>
+        <div class="portfolio-item">
+            <div class="item faishon"><img src="img/p2.jpg" width="100" height="100"></div>
+        </div>
+        <div class="portfolio-item">
+            <div class="item wedding"><img src="img/p3.jpg" width="100" height="100"></div>
+        </div>
+        <div class="portfolio-item">
+            <div class="item nature"><img src="img/p4.jpg" width="100" height="100"></div>
+        </div>
+        <div class="portfolio-item">
+            <div class="item faishon"><img src="img/p5.jpg" width="100" height="100"></div>
+        </div>
+        <div class="portfolio-item">
+            <div class="item wedding"><img src="img/p6.jpg" width="100" height="100"></div>
+        </div>
+        <div class="portfolio-item">
+            <div class="item nature"><img src="img/p7.jpg" width="100" height="100"></div>
+        </div>
+        <div class="portfolio-item">
+            <div class="item faishon"><img src="img/p8.jpg" width="100" height="100"></div>
+        </div>
+        <div class="portfolio-item">
+            <div class="item wedding"><img src="img/p9.jpg" width="100" height="100"></div>
+        </div>
+        
+
+    </section>
+    <script type="text/javascript">
+        $('.portfolio-item').isotope({
+            // options
+            itemSelector: '.item',
+            layoutMode: 'fitRows'
+          });
+          $('.portfolio-menu ul li').click(function(){
+          $('.portfolio-menu ul li').removeClass('active');
+          $(this).addClass('active');
+          });
+    </script>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>    
+</body>
+</html>
